@@ -15,7 +15,29 @@ const createUser = catchAsync(async (req:Request,res:Response)=>{
         data: result
     })
 });
+const getAllUser = catchAsync(async (req:Request,res:Response)=>{
+    const result = await userAuthService.getAllUsers();
+    sendResponse(res,{
+        statusCode: httpStatus.OK,
+        success:true,
+        message:'All user fetched successfully',
+        data: result
+    })
+});
+
+const getUserById = catchAsync(async (req:Request,res:Response)=>{
+    const {id} = req.params;
+    const result = await userAuthService.getUserById(id);
+    sendResponse(res,{
+        statusCode:httpStatus.OK,
+        success:true,
+        message:'User fetched successfully',
+        data:result
+    })
+})
 
 export const userAuthController = {
-    createUser
+    createUser,
+    getAllUser,
+    getUserById
 }
