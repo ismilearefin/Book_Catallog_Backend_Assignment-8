@@ -34,6 +34,11 @@
             "date": 1693641678354,
             "name": "C:\\projects\\Assignment-8\\Book_Catallog_Backend_Assignment-8\\logs\\winston\\errors\\phu-2023-02-09-14-error.log",
             "hash": "3ed349c105527ad74a4a6c4466b788b7de6e389ff3798bd9550a07cf8d39391c"
+        },
+        {
+            "date": 1693645226733,
+            "name": "C:\\projects\\Assignment-8\\Book_Catallog_Backend_Assignment-8\\logs\\winston\\errors\\phu-2023-02-09-15-error.log",
+            "hash": "e2d14ef2d813f96f911ff56e09792e0164e4531e98b0ebd1690b7eaab4f926d6"
         }
     ],
     "hashType": "sha256"
