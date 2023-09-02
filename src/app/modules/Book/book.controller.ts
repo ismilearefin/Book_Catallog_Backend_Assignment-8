@@ -42,8 +42,20 @@ const getBooksByCategoryId = catchAsync(async(req:Request, res:Response)=>{
     })
 });
 
+const getSingleBook = catchAsync(async(req:Request, res:Response)=>{
+    const {id} = req.params;
+    const result = await BookService.getSingleBook(id);
+    sendResponse(res,{
+        statusCode:httpStatus.OK,
+        success:true,
+        message:"Book fetched successfully",
+        data:result
+    });
+});
+
 export const BookController ={
     bookCreate,
     getAllBooks,
-    getBooksByCategoryId
+    getBooksByCategoryId,
+    getSingleBook
 }

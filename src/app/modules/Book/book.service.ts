@@ -18,7 +18,6 @@ const bookCreate = async(data:Book):Promise<Book> =>{
     return result;
 };
 
-
 const getAllBooks = async(
     filters: IBooksFilterRequest,
     options: IPaginationOptions
@@ -91,8 +90,18 @@ const  getBooksByCategoryId = async(categoryId: string): Promise<Book[]>=>{
     return result
 }
 
+const getSingleBook = async(id: string): Promise<Book | null>=>{
+    const result = await prisma.book.findUnique({
+        where:{
+            id
+        }
+    });
+    return result;
+};
+
 export const BookService = {
     bookCreate,
     getAllBooks,
-    getBooksByCategoryId
+    getBooksByCategoryId,
+    getSingleBook
 }
