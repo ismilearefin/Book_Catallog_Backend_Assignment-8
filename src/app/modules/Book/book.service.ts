@@ -64,7 +64,7 @@ const getAllBooks = async(
                     publicationDate: 'desc'
                 }
     });
-    
+
     const total = await prisma.book.count({
         where: whereConditions
     });
@@ -81,7 +81,18 @@ const getAllBooks = async(
     };
 }
 
+const  getBooksByCategoryId = async(categoryId: string): Promise<Book[]>=>{
+    const result = await prisma.book.findMany({
+        where:{
+            categoryId
+        }
+        
+    })
+    return result
+}
+
 export const BookService = {
     bookCreate,
-    getAllBooks
+    getAllBooks,
+    getBooksByCategoryId
 }

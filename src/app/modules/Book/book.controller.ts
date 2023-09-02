@@ -1,3 +1,4 @@
+
 import { Request, Response } from "express";
 import catchAsync from "../../../shared/catchAsync";
 import { BookService } from "./book.service";
@@ -30,7 +31,19 @@ const getAllBooks = catchAsync(async(req:Request,res:Response)=>{
     })
 });
 
+const getBooksByCategoryId = catchAsync(async(req:Request, res:Response)=>{
+    const {categoryId} = req.params;
+    const result = await BookService.getBooksByCategoryId(categoryId);
+    sendResponse(res,{
+        statusCode:httpStatus.OK,
+        success:true,
+        message:"Books with associated category data fetched successfully",
+        data:result
+    })
+});
+
 export const BookController ={
     bookCreate,
-    getAllBooks
+    getAllBooks,
+    getBooksByCategoryId
 }
