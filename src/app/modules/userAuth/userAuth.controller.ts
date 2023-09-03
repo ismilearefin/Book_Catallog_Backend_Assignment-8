@@ -3,6 +3,8 @@ import catchAsync from '../../../shared/catchAsync';
 import { userAuthService } from './userAuth.service';
 import sendResponse from '../../../shared/sendResponse';
 import httpStatus from 'http-status';
+import { ILoginUserResponse } from './userAuth.interface';
+import config from '../../../config';
 
 const createUser = catchAsync(async (req: Request, res: Response) => {
   const result = await userAuthService.createUser(req.body);
@@ -13,6 +15,29 @@ const createUser = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+
+const loginUser = catchAsync(async (req: Request, res: Response) => {
+  
+  const result = await userAuthService.loginUser(req.body);
+  const { refreshToken, ...others } = result;
+
+  // set refresh token into cookie
+  const cookieOptions = {
+    secure: config.env === 'production',
+    httpOnly: true,
+  };
+
+  res.cookie('refreshToken', refreshToken, cookieOptions);
+
+  sendResponse<ILoginUserResponse>(res, {
+    statusCode: 200,
+    success: true,
+    message: 'User signin successfully!',
+    data: others,
+  });
+});
+
+
 const getAllUser = catchAsync(async (req: Request, res: Response) => {
   const result = await userAuthService.getAllUsers();
   sendResponse(res, {
@@ -58,6 +83,7 @@ const deleteUser = catchAsync(async(req:Request,res:Response)=>{
 
 export const userAuthController = {
   createUser,
+  loginUser,
   getAllUser,
   getUserById,
   updateUser,
