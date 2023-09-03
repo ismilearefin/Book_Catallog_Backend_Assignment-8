@@ -7,11 +7,11 @@ const router = express.Router();
 
 
 
-router.post('/create-book', BookController.bookCreate);
+router.post('/create-book',auth(ENUM_USER_ROLE.ADMIN), BookController.bookCreate);
 router.get('/:id', BookController.getSingleBook)
 router.get('/:categoryId/category', BookController.getBooksByCategoryId)
-router.patch('/:id', BookController.updateSingleBook)
-router.get('/',auth(ENUM_USER_ROLE.CUSTOMER) ,BookController.getAllBooks)
-router.delete('/:id', BookController.deleteBook)
+router.patch('/:id',auth(ENUM_USER_ROLE.ADMIN), BookController.updateSingleBook)
+router.get('/' ,BookController.getAllBooks)
+router.delete('/:id',auth(ENUM_USER_ROLE.ADMIN), BookController.deleteBook)
 
 export const  BookRouter = router;
