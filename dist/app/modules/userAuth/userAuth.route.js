@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.userAuthRoutes = void 0;
+const express_1 = __importDefault(require("express"));
+const userAuth_controller_1 = require("./userAuth.controller");
+const auth_1 = __importDefault(require("../../middlewares/auth"));
+const user_1 = require("../../../enums/user");
+// import auth from '../../middlewares/auth';
+// import { ENUM_USER_ROLE } from '../../../enums/user';
+const router = express_1.default.Router();
+router.get('/users/:id', (0, auth_1.default)(user_1.ENUM_USER_ROLE.ADMIN), userAuth_controller_1.userAuthController.getUserById);
+router.get('/users', (0, auth_1.default)(user_1.ENUM_USER_ROLE.ADMIN), userAuth_controller_1.userAuthController.getAllUser);
+router.post('/auth/signup', userAuth_controller_1.userAuthController.createUser);
+router.post('/auth/signin', userAuth_controller_1.userAuthController.loginUser);
+router.patch('/users/:id', (0, auth_1.default)(user_1.ENUM_USER_ROLE.ADMIN), userAuth_controller_1.userAuthController.updateUser);
+router.delete('/users/:id', (0, auth_1.default)(user_1.ENUM_USER_ROLE.ADMIN), userAuth_controller_1.userAuthController.deleteUser);
+exports.userAuthRoutes = router;
