@@ -6,18 +6,18 @@
 
 - api/v1/auth/signup (POST)
 - api/v1/users (GET)
-- api/v1/users/6177a5b87d32123f08d2f5d4 (Single GET) Include an id that is saved in your database
-- api/v1/users/6177a5b87d32123f08d2f5d4 (PATCH)
-- api/v1/users/6177a5b87d32123f08d2f5d4 (DELETE) Include an id that is saved in your database
+- api/v1/users/27b2f5db-4710-4235-b17e-afb2f6f13aca (Single GET) 
+- api/v1/users/27b2f5db-4710-4235-b17e-afb2f6f13aca (PATCH)
+- api/v1/users/27b2f5db-4710-4235-b17e-afb2f6f13aca (DELETE) 
 - api/v1/profile (GET)
 
 ### Category
 
 - api/v1/categories/create-category (POST)
 - api/v1/categories (GET)
-- api/v1/categories/6177a5b87d32123f08d2f5d4 (Single GET) Include an id that is saved in your database
-- api/v1/categories/6177a5b87d32123f08d2f5d4 (PATCH)
-- api/v1/categories/6177a5b87d32123f08d2f5d4 (DELETE) Include an id that is saved in your database
+- api/v1/categories/ddc4cdfe-944e-4434-8f62-f00e71f5808d (Single GET) 
+- api/v1/categories/ddc4cdfe-944e-4434-8f62-f00e71f5808d (PATCH)
+- api/v1/categories/ddc4cdfe-944e-4434-8f62-f00e71f5808d (DELETE) 
 
 ### Books
 
