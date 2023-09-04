@@ -9,11 +9,7 @@ import httpStatus from 'http-status';
 import { ILoginUser, ILoginUserResponse } from './userAuth.interface';
 
 const createUser = async (data: User): Promise<User> => {
-  // // Hash password
-  // data.password = await bcrypt.hash(
-  //   data.password,
-  //   Number(config.bycrypt_salt_rounds)
-  // );
+
   const result = await prisma.user.create({
     data,
   });

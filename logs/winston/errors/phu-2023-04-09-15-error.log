@@ -1,0 +1,22 @@
+Mon Sep 04 2023 15:25:55 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.orderedBooks.create()` invocation:
+
+{
+  data: {
+    orderId: undefined,
+    bookId: "0545dade-3713-4b68-b6b8-522ac5d6748e",
+    quantity: "3",
++   order: {
++     create: OrderCreateWithoutOrderedBooksInput | OrderUncheckedCreateWithoutOrderedBooksInput,
++     connectOrCreate: OrderCreateOrConnectWithoutOrderedBooksInput,
++     connect: OrderWhereUniqueInput
++   }
+  }
+}
+
+Argument `order` is missing.
+Mon Sep 04 2023 15:28:19 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.order.create()` invocation:
+
+
+Unique constraint failed on the fields: (`id`)

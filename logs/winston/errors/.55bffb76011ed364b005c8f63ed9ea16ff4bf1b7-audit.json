@@ -79,6 +79,21 @@
             "date": 1693761340541,
             "name": "C:\\projects\\Assignment-8\\Book_Catallog_Backend_Assignment-8\\logs\\winston\\errors\\phu-2023-03-09-23-error.log",
             "hash": "e39067b0dd9bea81f2a6273c567e5501c96ce24ac9795d325e408ffcac17ac4b"
+        },
+        {
+            "date": 1693813871742,
+            "name": "C:\\projects\\Assignment-8\\Book_Catallog_Backend_Assignment-8\\logs\\winston\\errors\\phu-2023-04-09-13-error.log",
+            "hash": "ccd1437b1b933f4f118c317d58d49a2d91ef23e3b5aab5aaca4645d465eb71a9"
+        },
+        {
+            "date": 1693815073739,
+            "name": "C:\\projects\\Assignment-8\\Book_Catallog_Backend_Assignment-8\\logs\\winston\\errors\\phu-2023-04-09-14-error.log",
+            "hash": "851268eeb4d44bc7c978e6b0d336848d493717fb4498d63edd97c382d2783a8e"
+        },
+        {
+            "date": 1693818014883,
+            "name": "C:\\projects\\Assignment-8\\Book_Catallog_Backend_Assignment-8\\logs\\winston\\errors\\phu-2023-04-09-15-error.log",
+            "hash": "7b70ed55a0b8932d6354933d5a4ba0db25c313beac526fa40a1d6fce1ffe0c27"
         }
     ],
     "hashType": "sha256"

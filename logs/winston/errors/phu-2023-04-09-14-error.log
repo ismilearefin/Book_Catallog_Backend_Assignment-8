@@ -1,0 +1,86 @@
+Mon Sep 04 2023 14:11:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    orderedBooks: [
+      {
+        bookId: "0545dade-3713-4b68-b6b8-522ac5d6748e",
+        quantity: 3
+      },
+      {
+        bookId: "31418a50-4cc7-49c1-9c2b-448f6188a1eb",
+        quantity: 2
+      }
+    ],
++   user: {
++     create: UserCreateWithoutOrdersInput | UserUncheckedCreateWithoutOrdersInput,
++     connectOrCreate: UserCreateOrConnectWithoutOrdersInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `user` is missing.
+Mon Sep 04 2023 14:11:24 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    orderedBooks: [
+      {
+        bookId: "0545dade-3713-4b68-b6b8-522ac5d6748e",
+        quantity: 3
+      },
+      {
+        bookId: "31418a50-4cc7-49c1-9c2b-448f6188a1eb",
+        quantity: 2
+      }
+    ],
++   user: {
++     create: UserCreateWithoutOrdersInput | UserUncheckedCreateWithoutOrdersInput,
++     connectOrCreate: UserCreateOrConnectWithoutOrdersInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `user` is missing.
+Mon Sep 04 2023 14:25:22 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    orderedBooks: [
+      {
+        bookId: "0545dade-3713-4b68-b6b8-522ac5d6748e",
+        quantity: 3
+      },
+      {
+        bookId: "31418a50-4cc7-49c1-9c2b-448f6188a1eb",
+        quantity: 2
+      }
+    ],
++   user: {
++     create: UserCreateWithoutOrdersInput | UserUncheckedCreateWithoutOrdersInput,
++     connectOrCreate: UserCreateOrConnectWithoutOrdersInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `user` is missing.
+Mon Sep 04 2023 14:40:21 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ orderedBooks is not defined
+Mon Sep 04 2023 14:58:18 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.orderedBooks.create()` invocation:
+
+{
+  data: {
+    orderId: "bc980c2e-0f98-4223-b3e6-13d177694f89",
+    bookId: "0545dade-3713-4b68-b6b8-522ac5d6748e",
+    quantity: 3
+              ~
+  }
+}
+
+Argument `quantity`: Invalid value provided. Expected String, provided Int.
