@@ -6,13 +6,6 @@ import httpStatus from "http-status";
 
 const createOrder = catchAsync(async(req: Request, res: Response)=>{
     const user = ( req as any).user
-    // // {
-    // //     userId: 'a1716594-3b2c-43e8-9ad3-11f39ac52b9b',
-    // //     role: 'customer',
-    // //     iat: 1693813882,
-    // //     exp: 1693900282
-    // //   }
-    console.log(user.userId)
     const result = await OrderService.createOrder(req.body,user.userId);
 
     sendResponse(res,{
@@ -23,6 +16,17 @@ const createOrder = catchAsync(async(req: Request, res: Response)=>{
     })
 });
 
+const getAllOrders = catchAsync(async(req: Request, res: Response)=>{
+    const result = await OrderService.getAllOrders();
+    sendResponse(res,{
+        statusCode:httpStatus.OK,
+        success:true,
+        message:"Orders retrieved successfully",
+        data:result
+    })
+})
+
 export const OrderController ={
-    createOrder
+    createOrder,
+    getAllOrders
 }
