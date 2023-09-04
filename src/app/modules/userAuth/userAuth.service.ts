@@ -1,7 +1,6 @@
 import { Secret } from 'jsonwebtoken';
 import { User } from '@prisma/client';
 import prisma from '../../../shared/prisma';
-// import bcrypt from 'bcrypt';
 import config from '../../../config';
 import { jwtHelpers } from '../../../helpers/jwtHelpers';
 import ApiError from '../../../errors/ApiError';

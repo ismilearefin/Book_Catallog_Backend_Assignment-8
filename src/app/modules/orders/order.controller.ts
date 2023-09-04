@@ -42,8 +42,10 @@ const getSingleorderById = catchAsync(async(req: Request, res: Response)=>{
 
 
 
+
 export const OrderController ={
     createOrder,
     getAllOrders,
-    getSingleorderById
+    getSingleorderById,
+   
 }

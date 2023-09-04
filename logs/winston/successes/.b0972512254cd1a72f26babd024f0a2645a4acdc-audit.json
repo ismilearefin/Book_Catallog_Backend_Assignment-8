@@ -114,6 +114,11 @@
             "date": 1693832525356,
             "name": "C:\\projects\\Assignment-8\\Book_Catallog_Backend_Assignment-8\\logs\\winston\\successes\\phu-2023-04-09-19-success.log",
             "hash": "cdd39036bf26084ad9f9f5d8be9b51c0076293d3bbacda98aef46665a4a060d3"
+        },
+        {
+            "date": 1693836002136,
+            "name": "C:\\projects\\Assignment-8\\Book_Catallog_Backend_Assignment-8\\logs\\winston\\successes\\phu-2023-04-09-20-success.log",
+            "hash": "366afc0c1d4d1d7af1e6a19c08b701641211b5f98ef63c8dad0e3efc57bd614a"
         }
     ],
     "hashType": "sha256"

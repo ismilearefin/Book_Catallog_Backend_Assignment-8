@@ -55,6 +55,9 @@ const getSingleorderById =async (id:string,user:any):Promise<Order | null> => {
     const result = await prisma.order.findUnique({
         where:{
             id
+        },
+        include: {
+          orderedBooks: true,
         }
     });
     
@@ -71,8 +74,12 @@ const getSingleorderById =async (id:string,user:any):Promise<Order | null> => {
     return result;
 };
 
+
+
+
 export const OrderService = {
   createOrder,
   getAllOrders,
-  getSingleorderById
+  getSingleorderById,
+ 
 };
