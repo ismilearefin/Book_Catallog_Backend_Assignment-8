@@ -39,7 +39,7 @@ model Book {
   id               String            @id @default(uuid())
   title            String
   author           String
-  price            Float
+  price            Decimal
   genre            String
   publicationDate  DateTime
   categoryId       String
@@ -79,7 +79,7 @@ model OrderedBooks {
   order    Order  @relation(fields: [orderId], references: [id])
   bookId   String
   book     Book   @relation(fields: [bookId], references: [id])
-  quantity String
+  quantity Int
 
   @@map("orderedBooks")
 }

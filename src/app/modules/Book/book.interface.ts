@@ -3,6 +3,6 @@ export type IBooksFilterRequest = {
     title? : string | undefined
     author? : string | undefined
     genre? : string | undefined
-    price? : string | undefined
+    price? : number | undefined
     publicationDate? : string | undefined
 };
