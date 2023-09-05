@@ -39,12 +39,13 @@ const getAllOrders = async (user: any): Promise<Order[]> => {
     };
   } else {
     query = {
-        select:{
-            OrderedBooks:true
-        }
+      include:{
+        orderedBooks:true
+      }
     };
   }
   const result = await prisma.order.findMany(query);
+  
 
   return result;
 };
