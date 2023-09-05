@@ -15,21 +15,21 @@
 
 - api/v1/categories/create-category (POST)
 - api/v1/categories (GET)
-- api/v1/categories/ddc4cdfe-944e-4434-8f62-f00e71f5808d (Single GET) 
-- api/v1/categories/ddc4cdfe-944e-4434-8f62-f00e71f5808d (PATCH)
-- api/v1/categories/ddc4cdfe-944e-4434-8f62-f00e71f5808d (DELETE) 
+- api/v1/categories/159ab35e-bf18-4d81-8c97-74c822dfbe21 (Single GET) 
+- api/v1/categories/159ab35e-bf18-4d81-8c97-74c822dfbe21 (PATCH)
+- api/v1/categories/159ab35e-bf18-4d81-8c97-74c822dfbe21 (DELETE) 
 
 ### Books
 
 - api/v1/books/create-book (POST)
 - api/v1/books (GET)
-- api/v1/books/:categoryId/category (GET)
-- api/v1/books/:id (GET)
-- api/v1/books/:id (PATCH)
-- api/v1/books/:id (DELETE)
+- api/v1/books/159ab35e-bf18-4d81-8c97-74c822dfbe21/category (GET)
+- api/v1/books/2c79572a-35cb-4c43-858e-b46631c80ba5 (GET)
+- api/v1/books/2c79572a-35cb-4c43-858e-b46631c80ba5 (PATCH)
+- api/v1/books/2c79572a-35cb-4c43-858e-b46631c80ba5 (DELETE)
 
 ### Orders
 
 - api/v1/orders/create-order (POST)
 - api/v1/orders (GET) 
-- api/v1/orders/:orderId (GET)
+- api/v1/orders/28e56371-a128-4f6d-b075-feb2e7952d83 (GET)

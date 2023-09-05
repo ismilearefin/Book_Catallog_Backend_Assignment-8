@@ -48,8 +48,8 @@ const getAllOrders = (user) => __awaiter(void 0, void 0, void 0, function* () {
     }
     else {
         query = {
-            select: {
-                OrderedBooks: true
+            include: {
+                orderedBooks: true
             }
         };
     }
