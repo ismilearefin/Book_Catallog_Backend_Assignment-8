@@ -50,8 +50,8 @@ const loginUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void
     (0, sendResponse_1.default)(res, {
         statusCode: 200,
         success: true,
-        message: 'User signin successfully!',
-        data: others,
+        message: 'User signin successfully! 100',
+        token: others === null || others === void 0 ? void 0 : others.token
     });
 }));
 const getAllUser = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
