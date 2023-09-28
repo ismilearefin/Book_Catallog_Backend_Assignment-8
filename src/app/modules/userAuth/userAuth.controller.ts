@@ -32,8 +32,8 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
   sendResponse<ILoginUserResponse>(res, {
     statusCode: 200,
     success: true,
-    message: 'User signin successfully!',
-    data: others,
+    message: 'User signin successfully! 100',
+    token:others?.token
   });
 });
 
